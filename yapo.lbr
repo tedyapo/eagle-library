@@ -20,10 +20,10 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -44,8 +44,8 @@
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
@@ -2836,20 +2836,20 @@
 <smd name="CENTER@1" x="2.286" y="0" dx="1.0414" dy="4.572" layer="1" rot="R90"/>
 <polygon width="0.0254" layer="1">
 <vertex x="0" y="2.032"/>
-<vertex x="0" y="0.7366"/>
-<vertex x="4.572" y="0.7366"/>
+<vertex x="0" y="0.9906"/>
+<vertex x="4.572" y="0.9906"/>
 <vertex x="4.572" y="2.032"/>
 </polygon>
 <polygon width="0.0254" layer="1">
 <vertex x="0" y="-2.032"/>
-<vertex x="0" y="-0.7366"/>
-<vertex x="4.572" y="-0.7366"/>
+<vertex x="0" y="-0.9906"/>
+<vertex x="4.572" y="-0.9906"/>
 <vertex x="4.572" y="-2.032"/>
 </polygon>
-<pad name="GND@3" x="1.27" y="1.651" drill="0.3"/>
-<pad name="GND@5" x="1.27" y="-1.651" drill="0.3"/>
-<pad name="GND@4" x="4.064" y="1.651" drill="0.3"/>
-<pad name="GND@6" x="4.064" y="-1.651" drill="0.3"/>
+<pad name="GND@3" x="1.27" y="1.651" drill="0.3" stop="no"/>
+<pad name="GND@5" x="1.27" y="-1.651" drill="0.3" stop="no"/>
+<pad name="GND@4" x="4.064" y="1.651" drill="0.3" stop="no"/>
+<pad name="GND@6" x="4.064" y="-1.651" drill="0.3" stop="no"/>
 <pad name="GND@7" x="1.27" y="-3.81" drill="0.3"/>
 <pad name="GND@8" x="3.81" y="-3.81" drill="0.3"/>
 <pad name="GND@1" x="1.27" y="3.81" drill="0.3"/>
@@ -2876,15 +2876,22 @@
 <wire x1="4.064" y1="-3.2512" x2="4.064" y2="-2.286" width="0.127" layer="51"/>
 <wire x1="4.064" y1="-2.286" x2="0" y2="-2.286" width="0.127" layer="51"/>
 <wire x1="0" y1="-2.286" x2="0" y2="-3.2512" width="0.127" layer="51"/>
-<rectangle x1="0" y1="-2.032" x2="4.572" y2="2.032" layer="29"/>
-<smd name="GND@11" x="3.683" y="0.762" dx="0.0508" dy="0.0508" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="GND@12" x="3.683" y="-0.762" dx="0.0508" dy="0.0508" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="GND@11" x="4.445" y="1.143" dx="0.0508" dy="0.0508" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="GND@12" x="4.445" y="-1.143" dx="0.0508" dy="0.0508" layer="1" stop="no" thermals="no" cream="no"/>
 <pad name="GND@14" x="2.54" y="3.81" drill="0.3"/>
 <pad name="GND@15" x="2.54" y="-3.81" drill="0.3"/>
-<pad name="GND@16" x="2.667" y="-1.651" drill="0.3"/>
-<pad name="GND@17" x="2.667" y="1.651" drill="0.3"/>
+<pad name="GND@16" x="2.667" y="-1.651" drill="0.3" stop="no"/>
+<pad name="GND@17" x="2.667" y="1.651" drill="0.3" stop="no"/>
 <rectangle x1="0" y1="-2.032" x2="4.572" y2="2.032" layer="41"/>
 <smd name="BOTTOM_GND" x="2.286" y="0" dx="4.572" dy="9.144" layer="16"/>
+</package>
+<package name="SMA_RA_PCB">
+<circle x="0" y="0" radius="7.1628" width="0.254" layer="22"/>
+<pad name="CENTER" x="0" y="0" drill="1.27" diameter="1.778"/>
+<pad name="SHIELD@1" x="-2.54" y="-2.54" drill="1.3208" diameter="2.54" shape="octagon" thermals="no"/>
+<pad name="SHIELD@2" x="-2.54" y="2.54" drill="1.3208" diameter="2.54" shape="octagon" thermals="no"/>
+<pad name="SHIELD@3" x="2.54" y="2.54" drill="1.3208" diameter="2.54" shape="octagon" thermals="no"/>
+<pad name="SHIELD@4" x="2.54" y="-2.54" drill="1.3208" diameter="2.54" shape="octagon" thermals="no"/>
 </package>
 </packages>
 <symbols>
@@ -8700,6 +8707,22 @@
 <connects>
 <connect gate="G$1" pin="CENTER" pad="CENTER@1"/>
 <connect gate="G$1" pin="SHIELD" pad="BOTTOM_GND GND@1 GND@2 GND@3 GND@4 GND@5 GND@6 GND@7 GND@8 GND@11 GND@12 GND@14 GND@15 GND@16 GND@17 GND_PAD1 GND_PAD2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMA_FEMALE_RA" prefix="J">
+<gates>
+<gate name="G$1" symbol="COAX_JACK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMA_RA_PCB">
+<connects>
+<connect gate="G$1" pin="CENTER" pad="CENTER"/>
+<connect gate="G$1" pin="SHIELD" pad="SHIELD@1 SHIELD@2 SHIELD@3 SHIELD@4"/>
 </connects>
 <technologies>
 <technology name=""/>
