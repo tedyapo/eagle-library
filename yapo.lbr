@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -3284,6 +3284,27 @@
 <wire x1="2.7" y1="2.2" x2="2.7" y2="-2.3" width="0.127" layer="21"/>
 <circle x="-3.2" y="-2.7" radius="0.412309375" width="0" layer="21"/>
 </package>
+<package name="HEADER-2X5-50MIL">
+<pad name="5" x="0" y="-0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="6" x="0" y="0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="3" x="-1.27" y="-0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="7" x="1.27" y="-0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="8" x="1.27" y="0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="4" x="-1.27" y="0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="2" x="-2.54" y="0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="10" x="2.54" y="0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="9" x="2.54" y="-0.635" drill="0.7" diameter="1.016" shape="octagon"/>
+<pad name="1" x="-2.54" y="-0.635" drill="0.7" diameter="1.016" shape="square"/>
+<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.254" layer="21"/>
+<wire x1="-6.35" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="21"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="21"/>
+<wire x1="1.27" y1="-2.54" x2="6.35" y2="-2.54" width="0.254" layer="21"/>
+<wire x1="6.35" y1="-2.54" x2="6.35" y2="2.54" width="0.254" layer="21"/>
+<wire x1="6.35" y1="2.54" x2="-6.35" y2="2.54" width="0.254" layer="21"/>
+<wire x1="-1.27" y1="-2.54" x2="-1.27" y2="-1.651" width="0.254" layer="21"/>
+<wire x1="-1.27" y1="-1.651" x2="1.27" y2="-1.651" width="0.254" layer="21"/>
+<wire x1="1.27" y1="-1.651" x2="1.27" y2="-2.54" width="0.254" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="COAX_JACK">
@@ -6249,6 +6270,87 @@
 <wire x1="12.7" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
 <wire x1="15.24" y1="2.54" x2="15.24" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="15.24" y1="-2.54" x2="12.7" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="PIC16F15345">
+<pin name="VDD" x="0" y="25.4" length="middle" rot="R270"/>
+<pin name="VSS" x="0" y="-27.94" length="middle" rot="R90"/>
+<pin name="!MCLR!" x="-17.78" y="12.7" length="middle"/>
+<pin name="ICSPDAT" x="-17.78" y="10.16" length="middle"/>
+<pin name="ICSPCLK" x="-17.78" y="7.62" length="middle"/>
+<pin name="CLKIN" x="-17.78" y="0" length="middle"/>
+<pin name="RB4" x="-17.78" y="-15.24" length="middle"/>
+<pin name="RA2" x="17.78" y="12.7" length="middle" rot="R180"/>
+<pin name="RA4" x="17.78" y="10.16" length="middle" rot="R180"/>
+<pin name="RC0" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="RC1" x="17.78" y="0" length="middle" rot="R180"/>
+<pin name="RC2" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<pin name="RC3" x="17.78" y="-5.08" length="middle" rot="R180"/>
+<pin name="RC4" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<pin name="RC5" x="17.78" y="-10.16" length="middle" rot="R180"/>
+<pin name="RC6" x="17.78" y="-12.7" length="middle" rot="R180"/>
+<pin name="RC7" x="17.78" y="-15.24" length="middle" rot="R180"/>
+<pin name="RB5" x="-17.78" y="-12.7" length="middle"/>
+<pin name="RB6" x="-17.78" y="-10.16" length="middle"/>
+<pin name="RB7" x="-17.78" y="-7.62" length="middle"/>
+<wire x1="-12.7" y1="20.32" x2="-12.7" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-22.86" x2="12.7" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-22.86" x2="12.7" y2="20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="20.32" x2="-12.7" y2="20.32" width="0.254" layer="94"/>
+<text x="17.78" y="25.4" size="1.778" layer="95">&gt;NAME</text>
+<text x="17.78" y="22.86" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="SAMD21E">
+<pin name="GND" x="0" y="-27.94" length="middle" rot="R90"/>
+<pin name="VDDIN" x="0" y="25.4" length="middle" rot="R270"/>
+<pin name="VDDANA" x="-5.08" y="25.4" length="middle" rot="R270"/>
+<pin name="VDDCORE" x="5.08" y="25.4" length="middle" rot="R270"/>
+<pin name="PA02" x="-22.86" y="12.7" length="middle"/>
+<pin name="PA03" x="-22.86" y="10.16" length="middle"/>
+<pin name="PA27" x="22.86" y="-12.7" length="middle" rot="R180"/>
+<pin name="PA28" x="22.86" y="-15.24" length="middle" rot="R180"/>
+<pin name="PA04" x="-22.86" y="7.62" length="middle"/>
+<pin name="PA05" x="-22.86" y="5.08" length="middle"/>
+<pin name="PA06" x="-22.86" y="2.54" length="middle"/>
+<pin name="PA07" x="-22.86" y="0" length="middle"/>
+<pin name="SWDIO" x="-22.86" y="-15.24" length="middle"/>
+<pin name="SWCLK" x="-22.86" y="-17.78" length="middle"/>
+<pin name="PA08" x="-22.86" y="-2.54" length="middle"/>
+<pin name="PA09" x="-22.86" y="-5.08" length="middle"/>
+<pin name="PA10" x="-22.86" y="-7.62" length="middle"/>
+<pin name="PA11" x="-22.86" y="-10.16" length="middle"/>
+<pin name="PA14" x="22.86" y="12.7" length="middle" rot="R180"/>
+<pin name="PA15" x="22.86" y="10.16" length="middle" rot="R180"/>
+<pin name="PA25" x="22.86" y="-10.16" length="middle" rot="R180"/>
+<pin name="PA24" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="PA23" x="22.86" y="-5.08" length="middle" rot="R180"/>
+<pin name="PA22" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="PA19" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="PA18" x="22.86" y="2.54" length="middle" rot="R180"/>
+<pin name="PA17" x="22.86" y="5.08" length="middle" rot="R180"/>
+<pin name="PA16" x="22.86" y="7.62" length="middle" rot="R180"/>
+<pin name="RESETN" x="-22.86" y="-20.32" length="middle"/>
+<text x="12.7" y="27.94" size="1.778" layer="95">&gt;NAME</text>
+<text x="12.7" y="25.4" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="PA01" x="-22.86" y="15.24" length="middle"/>
+<pin name="PA00" x="-22.86" y="17.78" length="middle"/>
+<wire x1="-17.78" y1="20.32" x2="-17.78" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-22.86" x2="17.78" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-22.86" x2="17.78" y2="20.32" width="0.254" layer="94"/>
+<wire x1="17.78" y1="20.32" x2="-17.78" y2="20.32" width="0.254" layer="94"/>
+</symbol>
+<symbol name="SWD-ICSP-HEADER">
+<pin name="VCC" x="10.16" y="10.16" length="middle" rot="R180"/>
+<pin name="SWDIO" x="10.16" y="7.62" length="middle" rot="R180"/>
+<pin name="SWDCLK" x="10.16" y="5.08" length="middle" rot="R180"/>
+<pin name="RESETN" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="GND" x="10.16" y="-2.54" length="middle" rot="R180"/>
+<pin name="SWO" x="10.16" y="0" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="12.7" x2="5.08" y2="12.7" width="0.254" layer="94"/>
+<wire x1="5.08" y1="12.7" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
+<text x="-5.08" y="17.78" size="1.27" layer="95">&gt;NAME</text>
+<text x="-5.08" y="15.24" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10195,6 +10297,105 @@
 <connect gate="G$1" pin="VEE" pad="3 5 9 11 EP"/>
 <connect gate="G$1" pin="VN" pad="6"/>
 <connect gate="G$1" pin="VP" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PIC16F15345" prefix="IC" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="PIC16F15345" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC-20N">
+<connects>
+<connect gate="G$1" pin="!MCLR!" pad="4"/>
+<connect gate="G$1" pin="CLKIN" pad="2"/>
+<connect gate="G$1" pin="ICSPCLK" pad="18"/>
+<connect gate="G$1" pin="ICSPDAT" pad="19"/>
+<connect gate="G$1" pin="RA2" pad="17"/>
+<connect gate="G$1" pin="RA4" pad="3"/>
+<connect gate="G$1" pin="RB4" pad="13"/>
+<connect gate="G$1" pin="RB5" pad="12"/>
+<connect gate="G$1" pin="RB6" pad="11"/>
+<connect gate="G$1" pin="RB7" pad="10"/>
+<connect gate="G$1" pin="RC0" pad="16"/>
+<connect gate="G$1" pin="RC1" pad="15"/>
+<connect gate="G$1" pin="RC2" pad="14"/>
+<connect gate="G$1" pin="RC3" pad="7"/>
+<connect gate="G$1" pin="RC4" pad="6"/>
+<connect gate="G$1" pin="RC5" pad="5"/>
+<connect gate="G$1" pin="RC6" pad="8"/>
+<connect gate="G$1" pin="RC7" pad="9"/>
+<connect gate="G$1" pin="VDD" pad="1"/>
+<connect gate="G$1" pin="VSS" pad="20"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SAMD21E" prefix="IC" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="SAMD21E" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TQFP32_7X7">
+<connects>
+<connect gate="G$1" pin="GND" pad="10 28"/>
+<connect gate="G$1" pin="PA00" pad="1"/>
+<connect gate="G$1" pin="PA01" pad="2"/>
+<connect gate="G$1" pin="PA02" pad="3"/>
+<connect gate="G$1" pin="PA03" pad="4"/>
+<connect gate="G$1" pin="PA04" pad="5"/>
+<connect gate="G$1" pin="PA05" pad="6"/>
+<connect gate="G$1" pin="PA06" pad="7"/>
+<connect gate="G$1" pin="PA07" pad="8"/>
+<connect gate="G$1" pin="PA08" pad="11"/>
+<connect gate="G$1" pin="PA09" pad="12"/>
+<connect gate="G$1" pin="PA10" pad="13"/>
+<connect gate="G$1" pin="PA11" pad="14"/>
+<connect gate="G$1" pin="PA14" pad="15"/>
+<connect gate="G$1" pin="PA15" pad="16"/>
+<connect gate="G$1" pin="PA16" pad="17"/>
+<connect gate="G$1" pin="PA17" pad="18"/>
+<connect gate="G$1" pin="PA18" pad="19"/>
+<connect gate="G$1" pin="PA19" pad="20"/>
+<connect gate="G$1" pin="PA22" pad="21"/>
+<connect gate="G$1" pin="PA23" pad="22"/>
+<connect gate="G$1" pin="PA24" pad="23"/>
+<connect gate="G$1" pin="PA25" pad="24"/>
+<connect gate="G$1" pin="PA27" pad="25"/>
+<connect gate="G$1" pin="PA28" pad="27"/>
+<connect gate="G$1" pin="RESETN" pad="26"/>
+<connect gate="G$1" pin="SWCLK" pad="31"/>
+<connect gate="G$1" pin="SWDIO" pad="32"/>
+<connect gate="G$1" pin="VDDANA" pad="9"/>
+<connect gate="G$1" pin="VDDCORE" pad="29"/>
+<connect gate="G$1" pin="VDDIN" pad="30"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWD-ICSP-HEADER" prefix="J" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="SWD-ICSP-HEADER" x="0" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="HEADER-2X5-50MIL">
+<connects>
+<connect gate="G$1" pin="GND" pad="3 5 9"/>
+<connect gate="G$1" pin="RESETN" pad="10"/>
+<connect gate="G$1" pin="SWDCLK" pad="4"/>
+<connect gate="G$1" pin="SWDIO" pad="2"/>
+<connect gate="G$1" pin="SWO" pad="6"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
